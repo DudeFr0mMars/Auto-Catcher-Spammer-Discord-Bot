@@ -41,9 +41,7 @@ async def spammer():
     await text_channel.send(random.choice(list))
     intervals = [1,1.2,1.3]
     await asyncio.sleep(random.choice(intervals))
-
-spammer.start()
-
+    
 @bot.event
 async def on_message(message):     
       def check(m):
