@@ -11,8 +11,9 @@ from discord_webhook import DiscordWebhook
 import time
 import random
 
-TOKEN = "token here"
-cid = "channel id here"
+TOKEN = "ODQxMzQ4NTIyNTMxNDg3Nzc0.YSTUVA.RmhW81V2ZVmbjfddL4hg6_3I87g"
+
+cid = 879676296513335326
 #example: cid = 8778172817281
 #Don't put quots around channel ID
 
@@ -28,18 +29,31 @@ bot._skip_check = lambda x, y: False
 async def spammer():
   text_channel = bot.get_channel(cid)
   if text_channel != None:
-    list = ['Frysky God','DudeFromMars God','OG Developers','Subscribe Frysky on Youtube','Join Yveltal Faction']
+    list = ['Frysky God','DudeFromMars God','OG Developers','Subscribe Frysky on Youtube','Join Yveltal Faction','https://discord.gg/2vGnFbXYFd']
     await text_channel.send(random.choice(list))
-    msg = message.channel.history(limit=5)
-    if msg.content == 'stop' or 'st':
-      spammer.stop()
-    intervals = [1, 1.7, 1.6, 1.5, 1.4, 1.3, 1.2, 1.8, 1.9]
+    intervals = [1,1.2,1.3]
     await asyncio.sleep(random.choice(intervals))
 
-msg = message.channel.history(limit=5)
-if msg.content == 'start' or 'run' or 'r':
+@tasks.loop(seconds = 0.2)
+async def sleeper():
+  await text_channel.send('Sleeping for 60 seconds')
+  time.sleep(seconds = 60)
   spammer.start()
 
 spammer.start()
+
+@bot.command()
+async def stop(ctx):
+    spammer.stop()
+
+@bot.command()
+async def spam(ctx):
+  spammer.start()
+  
+@bot.command()
+async def say(ctx, *, args):
+  
+  await ctx.send(args)
+
 keep_alive()
 bot.run(TOKEN,bot=False)
