@@ -27,9 +27,7 @@ req = requests.get("https://discord.com/api/path/to/the/endpoint")
 gg = open('caught.txt', 'a')
 client = commands.Bot(command_prefix='.')
 client._skip_check = lambda x, y: False
-
 spammer.start()
-
 hint = ""
 @client.event
 async def on_message(message):
