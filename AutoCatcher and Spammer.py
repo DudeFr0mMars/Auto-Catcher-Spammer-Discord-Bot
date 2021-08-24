@@ -14,7 +14,7 @@ TOKEN = "Enter TOKEN Here"
 cid = "Enter channel id without quotes"
 #example: cid = 8778172817281
 
-f = open('pokes.txt', 'r')
+f = open('pokemon.txt', 'r')
 file = f.read()
 file = file.split('\n')
 for i in file:
