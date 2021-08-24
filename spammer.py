@@ -1,13 +1,11 @@
 import os
 import difflib
-import sqlite3
 import discord
 from discord.ext import commands
 from discord.ext import tasks
 import asyncio
 from keep_awake import keep_alive
 import requests
-from discord_webhook import DiscordWebhook
 import time
 import random
 
