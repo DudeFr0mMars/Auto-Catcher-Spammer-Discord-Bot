@@ -12,3 +12,5 @@ paste the url that appears on the right after you run it there should be somethi
 
 commands:
 .say <message> control the bot from another account
+  
+caught.txt and pokemon.txt are for pokemon auto catcher bot.
