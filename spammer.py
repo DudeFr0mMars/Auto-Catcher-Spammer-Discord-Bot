@@ -30,29 +30,16 @@ async def spammer():
   if text_channel != None:
     list = ['Frysky God','DudeFromMars God','OG Developers','Subscribe Frysky on Youtube','Join Yveltal Faction']
     await text_channel.send(random.choice(list))
+    msg = message.channel.history(limit=5)
+    if msg.content == 'stop' or 'st':
+      spammer.stop()
     intervals = [1, 1.7, 1.6, 1.5, 1.4, 1.3, 1.2, 1.8, 1.9]
     await asyncio.sleep(random.choice(intervals))
 
-@tasks.loop(seconds = 0.2)
-async def sleeper():
-  await text_channel.send('Sleeping for 60 seconds')
-  time.sleep(seconds = 60)
+msg = message.channel.history(limit=5)
+if msg.content == 'start' or 'run' or 'r':
   spammer.start()
 
 spammer.start()
-
-@bot.command()
-async def stop(ctx):
-    spammer.stop()
-
-@bot.command()
-async def spam(ctx):
-  spammer.start()
-  
-@bot.command()
-async def say(ctx, *, args):
-  
-  await ctx.send(args)
-
 keep_alive()
 bot.run(TOKEN,bot=False)
