@@ -12,5 +12,7 @@ paste the url that appears on the right after you run it there should be somethi
 
 commands:
 .say <message> control the bot from another account
+'start' to start the bot
+'stop' to stop the bot
   
 caught.txt and pokemon.txt are for pokemon auto catcher bot.
