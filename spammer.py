@@ -54,5 +54,5 @@ async def say(ctx, *, args):
   
   await ctx.send(args)
 
-keep_awake()
+keep_alive()
 bot.run(TOKEN,bot=False)
