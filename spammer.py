@@ -11,19 +11,6 @@ from discord_webhook import DiscordWebhook
 import time
 import random
 
-
-count = 0
-f = open('pokemon.txt', 'r')
-file = f.read()
-file = file.split('\n')
-for i in file:
-    if len(i) < 2:
-        del file[file.index(i)]
-pokemon_list = []
-for i in file:
-    if len(i) >= 3:
-        pokemon_list.append(i)
-
 TOKEN = "token here"
 cid = "channel id here"
 #example: cid = 8778172817281
