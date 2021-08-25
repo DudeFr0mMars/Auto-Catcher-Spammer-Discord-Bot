@@ -14,7 +14,7 @@ TOKEN = "Enter TOKEN Here"
 cid = "Enter channel id without quotes"
 #example: cid = 8778172817281
 
-req = requests.get("https://discord.com/api/path/to/the/endpoint%22)
+req = requests.get("https://discord.com/api/path/to/the/endpoint%22")
 
 print(req)
 
