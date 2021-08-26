@@ -1,4 +1,6 @@
 # Auto-Spammer
+
+NOTE: THIS IS AGAINST THE TOS OF DISCORD SO DON'T USE IT WITHOUT PROPER KNOWLEDGE
 How to setup:
 go to main.py
 step 1: put your token where it says TOKEN = "your token here"
